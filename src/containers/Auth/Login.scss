@@ -88,6 +88,17 @@
           font-size: 16px;
           margin-bottom: 8px;
         }
+        .custom-input-password {
+          position: relative;
+          .fa-eye,
+          .fa-eye-slash {
+            position: absolute;
+            font-size: 15px;
+            top: 17px;
+            right: 15px;
+            cursor: pointer;
+          }
+        }
       }
       .btn-login {
         margin: 20px 0;
@@ -96,7 +107,11 @@
         border-radius: 5px;
         border: none;
         outline: none;
-        background-color: rgba(128, 128, 128, 0.5);
+        background-image: linear-gradient(
+          to right,
+          gray,
+          rgba(0, 0, 255, 0.35)
+        );
         font-size: 16px;
         color: #fff;
       }
