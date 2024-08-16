@@ -6,7 +6,7 @@ import * as actions from "../../store/actions";
 
 import "./Login.scss";
 import { FormattedMessage } from "react-intl";
-import { divide } from "lodash";
+import { handleLoginApi } from "../../services/userService";
 
 class Login extends Component {
   constructor(props) {
@@ -29,9 +29,10 @@ class Login extends Component {
     });
   };
 
-  handleLogin = () => {
+  handleLoginApi = async () => {
     console.log(this.state.username);
     console.log(this.state.password);
+    await handleLoginApi(this.state.username, this.state.password);
   };
 
   handleShowHidePassword = () => {
@@ -89,7 +90,7 @@ class Login extends Component {
               <button
                 className="btn-login"
                 onClick={() => {
-                  this.handleLogin();
+                  this.handleLoginApi();
                 }}
               >
                 <b>Login</b>
