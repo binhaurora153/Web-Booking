@@ -42,6 +42,7 @@
   margin-right: 7px;
   background-color: #ee8d70c6;
   cursor: pointer;
+  transition: 0.4s;
   &:hover {
     background-color: #fff !important;
     color: rgba(255, 102, 0, 0.745);
@@ -56,8 +57,84 @@
   margin-right: 7px;
   background-color: rgba(134, 18, 18, 0.67);
   cursor: pointer;
+  transition: 0.4s;
   &:hover {
     background-color: #fff !important;
     color: red;
+  }
+}
+
+.btn-create {
+  padding: 0 18px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bd9f96 !important;
+  border-radius: 8px;
+  transition: 0.4s;
+  border: 0;
+  &:hover {
+    background-color: #d08e8e !important;
+    color: #422c25;
+
+    // border: 1px solid #422c25;
+  }
+}
+
+//
+
+.modal-user-container {
+  .modal-user-body {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      width: 48.2%;
+
+      &.max-width-input {
+        width: 99%;
+      }
+      input {
+        border: 1px solid grey;
+        border-radius: 4px;
+        height: 40px;
+        outline: none;
+        padding: 0 10px;
+      }
+      label {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  background-color: #bd9f96;
+  height: 50px;
+}
+
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 20px;
+}
+.modal .modal-dialog .modal-content .modal-header .close {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: red;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn {
+  height: 40px;
+  padding: 0 15px;
+}
+.modal .modal-dialog .modal-content .modal-footer .btn.btn-primary {
+  background-color: rgb(10, 102, 10);
+  width: 120px;
+  &:hover {
+    opacity: 0.8;
   }
 }
