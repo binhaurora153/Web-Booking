@@ -1,8 +1,8 @@
 .home-header-container {
   height: 60px;
-  border: 1px solid red;
   width: 100%;
   padding: 0 50px;
+  margin: 10px 0;
   .home-header-content {
     width: 100%;
     height: 100%;
@@ -23,6 +23,7 @@
       }
       .fa-bars {
         font-size: 25px;
+        margin-right: 5px;
         color: gray;
         cursor: pointer;
       }
@@ -45,6 +46,104 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+.home-header-banner {
+  background: url("../../assets/header-background.jpg");
+  height: 485px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 15px 0;
+
+  .title1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 1px 1px black;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  .title2 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 1px black;
+  }
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+
+    input {
+      height: 50px;
+      width: 400px;
+      border: none;
+      border-radius: 30px;
+      background-color: #f2da29ca;
+      outline: none;
+      padding-left: 50px;
+      font-size: 16px;
+    }
+    .fa-search {
+      position: absolute;
+      font-size: 20px;
+      left: 15px;
+    }
+  }
+  .content-down {
+    margin-top: 110px;
+
+    height: 160px;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.72);
+    .options {
+      width: 70%;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      display: flex;
+      justify-content: space-between;
+      .option-child {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        .icon-child {
+          margin: 0 auto;
+          i {
+            font-size: 30px;
+            background-color: #fff;
+            height: 50px;
+            border-radius: 50%;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #19c5b3;
+          }
+        }
+        .text-child {
+          font-size: 16px;
+          font-weight: 500;
+          color: #fff;
+          text-shadow: 1px 1px 2px black;
+          margin-top: 5px;
+          transition: 0.3s;
+          &:hover {
+            color: #19c5b3;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
