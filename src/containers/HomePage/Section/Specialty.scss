@@ -1,0 +1,80 @@
+.section-specialty {
+  margin-top: 20px;
+  padding-top: 20px;
+  width: 100%;
+  background-color: rgba(235, 235, 235, 0.85);
+
+  .specialty-container {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+
+    .specialty-header {
+      height: 60px;
+      padding: 35px 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title-section {
+        font-size: 25px;
+        font-weight: 550;
+        text-shadow: 0 0 1px black;
+      }
+      .btn-section {
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: rgb(113, 146, 113);
+        color: #fff;
+        border: none;
+        transition: 0.4s;
+        &:hover {
+          background-color: #dcd6d6;
+          color: brown;
+        }
+      }
+    }
+    .specialty-body {
+      .specialty-customize {
+        .bg-img {
+          width: 295px;
+          height: 180px;
+          background: url("../../../assets/specialty/xuongkhop.jpg");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 10px;
+          margin-left: 5px;
+        }
+      }
+
+      //   img {
+      //     height: 200px;
+      //     width: 100%;
+      //     padding: 10px;
+      //     border-radius: 15px;
+      //   }
+
+      .slick-arrow.slick-prev {
+        top: 80px !important;
+        margin-left: 10px;
+        z-index: 1;
+      }
+      .slick-arrow.slick-next {
+        top: 80px !important;
+        margin-right: 35px;
+      }
+      .slick-arrow.slick-arrow.slick-prev::before {
+        font-size: 40px;
+        color: gray;
+      }
+      .slick-arrow.slick-next::before {
+        font-size: 40px;
+        color: gray;
+      }
+    }
+  }
+}

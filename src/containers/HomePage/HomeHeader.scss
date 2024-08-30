@@ -62,6 +62,7 @@
       }
       .language-vi {
         cursor: pointer;
+        color: rgba(128, 128, 128, 0.498);
         &.active {
           color: rgb(210, 6, 6);
           font-weight: 600;
@@ -73,6 +74,7 @@
       }
       .language-en {
         cursor: pointer;
+        color: rgba(128, 128, 128, 0.498);
         margin-left: 10px;
         margin-right: 40px;
 
