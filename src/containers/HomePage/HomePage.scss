@@ -1,0 +1,144 @@
+.slick-arrow.slick-prev {
+  top: 100px !important;
+  margin-left: 5px;
+  z-index: 1;
+}
+.slick-arrow.slick-next {
+  top: 100px !important;
+  margin-right: 27px;
+}
+.slick-arrow.slick-arrow.slick-prev::before {
+  font-size: 40px;
+  color: gray;
+}
+.slick-arrow.slick-next::before {
+  font-size: 40px;
+  color: gray;
+}
+
+.section-share {
+  &.section-specialty {
+    background-color: rgba(235, 235, 235, 0.85);
+  }
+  &.section-medical-facility {
+    background-color: #fff;
+  }
+  &.section-handbook {
+    background-color: #fff;
+  }
+  .section-body {
+    .section-customize {
+      .bg-img {
+        width: 295px;
+        height: 200px;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        border-radius: 10px;
+
+        &.section-medical-facility {
+          background-image: url("../../assets/medical-facility/benhvien1.jpg");
+        }
+        &.section-outstanding-doctor {
+          background-image: url("../../assets/out-standing-doctor/avatar.jpg");
+          width: 120px !important;
+          height: 120px !important;
+          margin: 0 auto;
+          border-radius: 50%;
+          margin-bottom: 10px;
+        }
+        &.section-handbook {
+          background-image: url("../../assets/handbook/camnang.jpg");
+        }
+      }
+      .img1 {
+        background-image: url("../../assets/specialty/xuongkhop.jpg");
+      }
+      .img2 {
+        background-image: url("../../assets/specialty/thankinh.jpg");
+      }
+      .img3 {
+        background-image: url("../../assets/specialty/timmach.jpg");
+      }
+      .img4 {
+        background-image: url("../../assets/specialty/hetieuhoa.jpg");
+      }
+      .img5 {
+        background-image: url("../../assets/specialty/taimuihong.jpg");
+      }
+      .img6 {
+        background-image: url("../../assets/specialty/cotsong.jpg");
+      }
+      .img7 {
+        background-image: url("../../assets/specialty/cotruyen.jpg");
+      }
+      .img8 {
+        background-image: url("../../assets/specialty/sanphu.jpg");
+      }
+      .section-text {
+        margin-top: 5px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.746);
+      }
+    }
+
+    //   img {
+    //     height: 200px;
+    //     width: 100%;
+    //     padding: 10px;
+    //     border-radius: 15px;
+    //   }
+  }
+}
+
+.section-share {
+  padding: 20px 0;
+  padding-bottom: 40px;
+  width: 100%;
+  background-color: rgba(235, 235, 235, 0.85);
+
+  .section-container {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+
+    .section-header {
+      height: 60px;
+      padding: 35px 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title-section {
+        font-size: 25px;
+        font-weight: 550;
+        text-shadow: 0 0 1px black;
+      }
+      .btn-section {
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: rgb(113, 146, 113);
+        color: #fff;
+        border: none;
+        transition: 0.4s;
+        &:hover {
+          background-color: #dcd6d6;
+          color: brown;
+        }
+      }
+    }
+  }
+}
+
+.section-customize {
+  padding: 5px;
+  .customize-border {
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 0;
+  }
+}

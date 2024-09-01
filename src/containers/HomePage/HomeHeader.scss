@@ -92,6 +92,7 @@
 }
 
 .home-header-banner {
+  margin-bottom: 20px;
   background-image: url("../../assets/header-background.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1));
   height: 500px;
@@ -140,7 +141,6 @@
   }
   .content-down {
     margin-top: 155px;
-
     height: 130px;
     width: 100%;
     background-image: linear-gradient(
