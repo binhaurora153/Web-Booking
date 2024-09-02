@@ -9,16 +9,56 @@
   color: $common-text-color;
   height: 40px;
   position: relative;
+  font-weight: 600;
   .btn-logout {
     color: $common-text-color;
     line-height: 40px;
     height: 40px;
     padding: 0 10px;
     &:hover {
-      background-color: darken($colormain, 5);
+      // background-color: darken($colormain, 5);
+      background-color: gray;
     }
     i {
       font-size: $base-size + 1px;
+      padding: 10px 0 10px 10px;
+    }
+  }
+}
+
+.languages {
+  font-weight: 500;
+  .language-en {
+    margin: 0 20px 0 10px;
+    padding: 3px 2px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      font-weight: 600;
+      color: rgba(0, 128, 0, 0.94);
+      text-decoration: underline;
+      opacity: 1;
+    }
+    &.active {
+      font-weight: 600;
+      color: rgba(0, 128, 0, 0.94);
+      opacity: 1;
+    }
+  }
+  .language-vi {
+    padding: 3px 2px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      font-weight: 600;
+      color: rgba(229, 4, 4, 0.901);
+      text-decoration: underline;
+      opacity: 1;
+    }
+    &.active {
+      font-weight: 600;
+      opacity: 1;
+      color: rgba(229, 4, 4, 0.901);
     }
   }
 }
