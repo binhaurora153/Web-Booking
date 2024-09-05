@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import { FormattedMessage } from "react-intl";
 import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
 import { adminMenu } from "./menuApp";
@@ -12,8 +12,8 @@ class Header extends Component {
     this.props.changeLanguageAppRedux(language);
   };
   render() {
-    const { processLogout, language } = this.props;
-
+    const { processLogout, language, userInfo } = this.props;
+    // console.log("check user info", userInfo);
     return (
       <div className="header-container">
         {/* thanh navigator */}
@@ -22,6 +22,10 @@ class Header extends Component {
         </div>
 
         <div className="languages">
+          <span className="welcome">
+            <FormattedMessage id={"homeheader.welcome"} />,{" "}
+            {userInfo && userInfo.firstName ? userInfo.lastName : ""} !
+          </span>
           <span
             className={
               language === LANGUAGES.VI ? "language-vi active" : "language-vi"
@@ -56,6 +60,7 @@ const mapStateToProps = (state) => {
   return {
     language: state.app.language,
     isLoggedIn: state.user.isLoggedIn,
+    userInfo: state.user.userInfo,
   };
 };
 
