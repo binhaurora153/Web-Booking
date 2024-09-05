@@ -14,10 +14,10 @@ class About extends Component {
               height="330"
               src="https://www.youtube.com/embed/kPa7bsKwL-c"
               title="Lady Gaga, Bruno Mars - Die With A Smile (Official Music Video)"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
           </div>
           <div className="content-right">Đây là bài hát tui iu thích hé</div>
