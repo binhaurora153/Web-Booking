@@ -1,0 +1,38 @@
+label {
+  font-weight: 600;
+  margin: 10px 0 5px 0;
+}
+
+.preview-img-container {
+  .preview-image {
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.643);
+    border-radius: 5px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .label-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    width: 80px;
+    margin-top: 0 !important;
+    cursor: pointer;
+    background-color: rgb(167, 164, 164);
+    border-radius: 5px;
+    transition: 0.4s;
+    font-weight: 500 !important;
+    border: none;
+    .fa-upload {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}
