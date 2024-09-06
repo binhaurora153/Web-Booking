@@ -34,7 +34,15 @@
 .fas {
   font-size: 18px;
 }
+
+.text-center {
+  display: flex;
+  justify-content: center;
+}
 .btn-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 30px;
   border: none;
@@ -50,6 +58,9 @@
 }
 
 .btn-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 30px;
   border: none;
@@ -133,6 +144,7 @@
 }
 .modal .modal-dialog .modal-content .modal-footer .btn.btn-primary {
   background-color: rgb(10, 102, 10);
+  border: none;
   width: 120px;
   &:hover {
     opacity: 0.8;
