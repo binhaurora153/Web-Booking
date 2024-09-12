@@ -171,7 +171,7 @@ class UserManage extends Component {
                       <td>{item.firstName}</td>
                       <td>{item.lastName}</td>
                       <td>{item.address}</td>
-                      <td className="text-center">
+                      <td className="text-center button-flex">
                         <button
                           className="btn-edit"
                           onClick={() => this.handleEditUser(item)}

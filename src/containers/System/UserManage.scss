@@ -35,9 +35,11 @@
   font-size: 18px;
 }
 
-.text-center {
+.button-flex {
+  display: flex;
   justify-content: center;
 }
+
 .btn-edit {
   display: flex;
   align-items: center;
