@@ -1,0 +1,29 @@
+.manage-doctor-container {
+  padding: 0 30px;
+
+  .save-content-doctor {
+    height: 40px;
+    width: 130px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: rgba(15, 130, 15, 0.709);
+    color: rgb(58, 57, 57);
+    transition: 0.4s;
+    &:hover {
+      background-color: gray;
+      color: #fff;
+    }
+  }
+  .more-infor {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+    .content-left {
+      width: 40%;
+    }
+    .content-right {
+      width: 60%;
+    }
+  }
+}
