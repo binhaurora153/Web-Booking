@@ -6,13 +6,29 @@
     width: 130px;
     border: none;
     border-radius: 10px;
+    font-weight: 600;
     font-size: 15px;
-    background-color: rgba(15, 130, 15, 0.709);
-    color: rgb(58, 57, 57);
+    background-color: rgba(153, 91, 9, 0.709);
+    color: #fff;
     transition: 0.4s;
     &:hover {
       background-color: gray;
-      color: #fff;
+      color: #f4dddd;
+    }
+  }
+  .create-content-doctor {
+    height: 40px;
+    width: 130px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: rgba(15, 130, 15, 0.709);
+    color: #fff;
+    transition: 0.4s;
+    &:hover {
+      background-color: gray;
+      color: #f4dddd;
     }
   }
   .more-infor {
