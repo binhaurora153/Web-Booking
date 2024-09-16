@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
-
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils";
+import { withRouter } from "react-router";
 
 class OutStandingDoctor extends Component {
   constructor(props) {
@@ -25,6 +24,10 @@ class OutStandingDoctor extends Component {
   componentDidMount() {
     this.props.loadTopDoctors();
   }
+
+  handleViewDetailDoctor = (doctor) => {
+    this.props.history.push(`/detail-doctor/${doctor.id}`);
+  };
   render() {
     let arrDoctors = this.state.arrDoctors;
     let { language } = this.props;
@@ -42,84 +45,6 @@ class OutStandingDoctor extends Component {
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
-              {/* <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 1</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 2</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 3</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 4</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 5</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 6</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-background">
-                    <div className="bg-img section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Bác sĩ 7</div>
-                    <div>Cơ xương khớp</div>
-                  </div>
-                </div>
-              </div> */}
-
               {arrDoctors &&
                 arrDoctors.length > 0 &&
                 arrDoctors.map((item, index) => {
@@ -132,7 +57,11 @@ class OutStandingDoctor extends Component {
                   let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName} `;
                   let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
                   return (
-                    <div className="section-customize" key={index}>
+                    <div
+                      className="section-customize"
+                      key={index}
+                      onClick={() => this.handleViewDetailDoctor(item)}
+                    >
                       <div className="customize-border">
                         <div className="outer-background">
                           <div
@@ -174,4 +103,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor)
+);

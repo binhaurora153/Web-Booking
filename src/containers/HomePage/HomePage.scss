@@ -32,6 +32,11 @@
   }
   .section-body {
     .section-customize {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+        color: brown;
+      }
       .bg-img {
         width: 295px;
         height: 200px;

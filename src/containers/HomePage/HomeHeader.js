@@ -100,88 +100,90 @@ class HomeHeader extends Component {
             </div>
           </div>
         </div>
-        <div className="home-header-banner">
-          <div className="content-up">
-            <div className="title1">
-              <b>
-                <FormattedMessage id={"banner.title1"} />
-              </b>
+        {this.props.isShowBanner === true && (
+          <div className="home-header-banner">
+            <div className="content-up">
+              <div className="title1">
+                <b>
+                  <FormattedMessage id={"banner.title1"} />
+                </b>
+              </div>
+              <div className="title2">
+                <b>
+                  <FormattedMessage id={"banner.title2"} />
+                </b>
+              </div>
+              <div className="search">
+                <i className="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm tại đây" />
+              </div>
             </div>
-            <div className="title2">
-              <b>
-                <FormattedMessage id={"banner.title2"} />
-              </b>
-            </div>
-            <div className="search">
-              <i className="fas fa-search"></i>
-              <input type="text" placeholder="Tìm kiếm tại đây" />
+            <div className="content-down">
+              <div className="options">
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">
+                    <b>
+                      <FormattedMessage id={"banner.specialized-examination"} />
+                    </b>
+                  </div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-mobile-alt"></i>
+                  </div>
+                  <div className="text-child">
+                    <b>
+                      <FormattedMessage id={"banner.remote-examination"} />
+                    </b>
+                  </div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-book"></i>
+                  </div>
+                  <div className="text-child">
+                    <b>
+                      <FormattedMessage id={"banner.general-examination"} />
+                    </b>
+                  </div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-vial"></i>
+                  </div>
+                  <div className="text-child">
+                    <b>
+                      <FormattedMessage id={"banner.medical-test"} />
+                    </b>
+                  </div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-user-md"></i>
+                  </div>
+                  <div className="text-child">
+                    <b>
+                      <FormattedMessage id={"banner.mental-health"} />
+                    </b>
+                  </div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-wrench"></i>
+                  </div>
+                  <div className="text-child">
+                    <b>
+                      <FormattedMessage id={"banner.dental-examination"} />
+                    </b>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="content-down">
-            <div className="options">
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">
-                  <b>
-                    <FormattedMessage id={"banner.specialized-examination"} />
-                  </b>
-                </div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-mobile-alt"></i>
-                </div>
-                <div className="text-child">
-                  <b>
-                    <FormattedMessage id={"banner.remote-examination"} />
-                  </b>
-                </div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-book"></i>
-                </div>
-                <div className="text-child">
-                  <b>
-                    <FormattedMessage id={"banner.general-examination"} />
-                  </b>
-                </div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-vial"></i>
-                </div>
-                <div className="text-child">
-                  <b>
-                    <FormattedMessage id={"banner.medical-test"} />
-                  </b>
-                </div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-user-md"></i>
-                </div>
-                <div className="text-child">
-                  <b>
-                    <FormattedMessage id={"banner.mental-health"} />
-                  </b>
-                </div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-wrench"></i>
-                </div>
-                <div className="text-child">
-                  <b>
-                    <FormattedMessage id={"banner.dental-examination"} />
-                  </b>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
       </React.Fragment>
     );
   }
