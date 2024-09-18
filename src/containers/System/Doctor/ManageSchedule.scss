@@ -14,12 +14,20 @@
     margin: 30px 0;
     display: flex;
     gap: 20px;
+
     flex-wrap: wrap;
     .btn-schedule {
       border: 1px solid green;
       padding: 5px 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(78, 78, 78);
       &:hover {
-        background-color: gray;
+        background-color: rgba(128, 128, 128, 0.744);
+        color: #fff;
+      }
+      &.active {
+        background-color: rgba(128, 128, 128, 0.744);
         color: #fff;
       }
     }
