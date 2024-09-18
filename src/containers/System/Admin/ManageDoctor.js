@@ -100,7 +100,6 @@ class ManageDoctor extends Component {
         hasOldData: false,
       });
     }
-    console.log("select", res);
   };
 
   handleOnChangeDesc = (event) => {
@@ -174,7 +173,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAllDoctors: (id) => dispatch(actions.fetchAllDoctors()),
+    fetchAllDoctors: () => dispatch(actions.fetchAllDoctors()),
     saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctor(data)),
   };
 };

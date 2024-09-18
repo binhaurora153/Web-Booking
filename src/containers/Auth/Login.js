@@ -43,7 +43,6 @@ class Login extends Component {
       }
       if (data && data.errCode === 0) {
         this.props.userLoginSuccess(data.user);
-        console.log("Login succeeds");
       }
     } catch (error) {
       if (error.response) {
@@ -53,8 +52,6 @@ class Login extends Component {
           });
         }
       }
-
-      console.log("dkhaksdhjas", error.response);
     }
   };
 
@@ -62,6 +59,11 @@ class Login extends Component {
     this.setState({
       isShowPassword: !this.state.isShowPassword,
     });
+  };
+  handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      this.handleLogin();
+    }
   };
   render() {
     //jsx
@@ -91,8 +93,8 @@ class Login extends Component {
                   type={this.state.isShowPassword ? "text" : "password"}
                   className="form-control"
                   placeholder="Enter your password"
-                  value={this.state.password}
                   onChange={(event) => this.handleOnChangePassword(event)}
+                  onKeyDown={(event) => this.handleKeyDown(event)}
                 ></input>
                 <span
                   onClick={() => {
