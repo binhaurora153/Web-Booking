@@ -53,8 +53,9 @@ class DoctorSchedule extends Component {
       let doctorId = this.props.doctorIdFromParent;
       let date = event.target.value;
       let res = await getScheduleDoctorByDate(doctorId, date);
-      console.log("check", res);
+      console.log("chech res", res);
     }
+    console.log("dfkghjfdhgdkjfhgjkdf");
   };
   render() {
     let { allDays } = this.state;
