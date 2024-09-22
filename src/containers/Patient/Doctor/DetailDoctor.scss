@@ -34,8 +34,7 @@
   .schedule-doctor {
     margin: 20px 40px;
     display: flex;
-    height: 200px;
-    border: 1px solid red;
+    height: 250px;
 
     .content-left {
       width: 50%;
@@ -45,8 +44,8 @@
     }
   }
   .detail-infor-doctor {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid rgba(128, 128, 128, 0.305);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.305);
     padding: 20px 10px 20px 30px;
     margin-bottom: 20px;
     h3 {
