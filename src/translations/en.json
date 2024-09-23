@@ -72,5 +72,17 @@
       "choose": "Choose",
       "book-free": "and book (free)"
     }
+  },
+  "admin": {
+    "manage-doctor": {
+      "title": " Create more information doctors",
+      "choose-doctor": "Choose doctor",
+      "choose-price": "Choose price",
+      "choose-payment": "Choose payment",
+      "choose-province": "Choose province",
+      "infor": "Introductory information",
+      "add": "Create Infor",
+      "save": "Save Infor"
+    }
   }
 }
