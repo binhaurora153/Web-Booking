@@ -1,0 +1,82 @@
+.doctor-extra-infor-container {
+  padding-left: 20px;
+  .content-up {
+    .text-address {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: brown;
+      font-size: 17px;
+    }
+    .name-clinic {
+      font-weight: 600;
+      font-size: 16px;
+      padding: 5px 0;
+    }
+    .detail-address {
+      font-style: italic;
+      color: gray;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+  .content-down {
+    .short-infor {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: brown;
+      font-size: 17px;
+
+      .price-edit {
+        color: rgba(65, 63, 63, 0.871);
+        font-size: 17px;
+      }
+      .span-edit {
+        margin-left: 5px;
+        font-size: 13px;
+        color: rgb(89, 168, 210);
+        text-transform: none;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+          text-decoration: underline;
+        }
+      }
+    }
+    .title-price-down {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(165, 42, 42, 0.759);
+      font-size: 17px;
+      border-top: 1px solid rgba(128, 128, 128, 0.32);
+      border-bottom: 1px solid rgba(128, 128, 128, 0.32);
+    }
+    .detail-infor {
+      background-color: #dddddd1b;
+      border: 1px solid gray;
+      padding: 5px;
+      .right {
+        float: right;
+      }
+    }
+    .payment {
+      border: 1px solid gray;
+      background-color: #dddddd88;
+      padding: 5px;
+    }
+    .hide-price {
+      margin-top: 10px;
+      margin-left: 5px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(89, 168, 210);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

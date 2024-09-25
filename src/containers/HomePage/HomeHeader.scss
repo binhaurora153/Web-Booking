@@ -37,7 +37,14 @@
       align-items: center;
       justify-content: space-between;
       font-size: 16px;
+
       .child-content {
+        cursor: pointer;
+        padding: 5px 10px;
+        &:hover {
+          border-radius: 10px;
+          background-color: rgba(128, 128, 128, 0.151);
+        }
         .subs-title {
           font-weight: 400;
           font-size: 13px;

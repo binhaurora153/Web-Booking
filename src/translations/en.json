@@ -71,11 +71,23 @@
       "no-schedule": "There are no appointments available during this time, please choose another time.",
       "choose": "Choose",
       "book-free": "and book (free)"
+    },
+    "extra-infor-doctor": {
+      "text-address": "Address Clinic",
+      "price": "EXAMINATION PRICE",
+      "detail": "See details",
+      "hide-price": "Hide price list"
     }
   },
   "admin": {
     "manage-doctor": {
       "title": " Create more information doctors",
+      "price": "Price",
+      "payment": "Payment",
+      "province": "Province",
+      "name-clinic": "Name clinic",
+      "address-clinic": "Address clinic",
+      "note": "Note",
       "choose-doctor": "Choose doctor",
       "choose-price": "Choose price",
       "choose-payment": "Choose payment",
