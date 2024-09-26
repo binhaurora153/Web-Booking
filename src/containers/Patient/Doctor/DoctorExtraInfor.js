@@ -63,7 +63,7 @@ class DoctorExtraInfor extends Component {
                       value={extraInfor.priceTypeData.valueVi}
                       displayType={"text"}
                       thousandSeparator={true}
-                      suffix=" VND"
+                      suffix="VND"
                     />
                   )}
 
@@ -106,7 +106,7 @@ class DoctorExtraInfor extends Component {
                           value={extraInfor.priceTypeData.valueVi}
                           displayType={"text"}
                           thousandSeparator={true}
-                          suffix=" VND"
+                          suffix="VND"
                         />
                       )}
 
