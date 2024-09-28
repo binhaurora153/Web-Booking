@@ -77,6 +77,21 @@
       "price": "EXAMINATION PRICE",
       "detail": "See details",
       "hide-price": "Hide price list"
+    },
+
+    "booking-modal": {
+      "title": "Information on scheduling medical examinations",
+      "fullName": "Full name",
+      "phoneNumber": "Phonenumber",
+      "email": "Email",
+      "address": "Address",
+      "reason": "Reason for examination",
+      "birthday": "Birthday",
+      "gender": "Gender",
+      "btn-confirm": "Confirm",
+      "btn-cancel": "Cancel",
+      "booking-free": "Free booking",
+      "price": "Examination price"
     }
   },
   "admin": {

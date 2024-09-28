@@ -4,15 +4,15 @@
   justify-content: center;
   margin-bottom: 20px;
   .content-left {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
   }
   .content-right {
-    width: 70%;
+    object-fit: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,6 +27,12 @@
       font-weight: 500;
     }
   }
+}
+.date--time {
+  font-weight: 600;
+  color: rgb(86, 85, 85);
+  margin-top: -5px;
+  margin-bottom: 3px;
 }
 .price-clinic {
   font-size: 16px;

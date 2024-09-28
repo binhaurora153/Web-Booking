@@ -5,6 +5,8 @@ import { FormattedMessage } from "react-intl";
 import "./ProfileDoctor.scss";
 import { getProfileDoctorById } from "../../../services/userService";
 import NumberFormat from "react-number-format";
+import _ from "lodash";
+import moment from "moment";
 class ProfileDoctor extends Component {
   constructor(props) {
     super(props);
@@ -35,9 +37,45 @@ class ProfileDoctor extends Component {
     }
   }
 
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  renderTimeBooking = (dataTime) => {
+    let { language } = this.props;
+    let labelVi = moment
+      .unix(+dataTime.date / 1000)
+      .format("dddd - DD/MM/YYYY");
+
+    if (dataTime && !_.isEmpty(dataTime)) {
+      let time =
+        language === LANGUAGES.VI
+          ? dataTime.timeTypeData.valueVi
+          : dataTime.timeTypeData.valueEn;
+      let date =
+        language === LANGUAGES.VI
+          ? (dataTime.label = this.capitalizeFirstLetter(labelVi))
+          : moment
+              .unix(+dataTime.date / 1000)
+              .locale("en")
+              .format("ddd - MM/DD/YYYY");
+      return (
+        <>
+          <div className="date--time">
+            {time} - {date}
+          </div>
+          <div>
+            <FormattedMessage id="patient.booking-modal.booking-free" />
+          </div>
+        </>
+      );
+    }
+    return <></>;
+  };
+
   render() {
     let { dataProfile } = this.state;
-    let { language } = this.props;
+    let { language, isShowDes, dataTime } = this.props;
     let nameVi = "",
       nameEn = "";
     if (dataProfile && dataProfile.positionData) {
@@ -62,16 +100,22 @@ class ProfileDoctor extends Component {
               {language === LANGUAGES.VI ? nameVi : nameEn}
             </div>
             <div className="down">
-              {dataProfile &&
-                dataProfile.Markdown &&
-                dataProfile.Markdown.description && (
-                  <span>{dataProfile.Markdown.description}</span>
-                )}
+              {isShowDes === true ? (
+                <>
+                  {dataProfile &&
+                    dataProfile.Markdown &&
+                    dataProfile.Markdown.description && (
+                      <span>{dataProfile.Markdown.description}</span>
+                    )}
+                </>
+              ) : (
+                <>{this.renderTimeBooking(dataTime)}</>
+              )}
             </div>
           </div>
         </div>
         <div className="price-clinic">
-          Giá khám:{" "}
+          <FormattedMessage id="patient.booking-modal.price" />:{" "}
           {dataProfile &&
             dataProfile.Doctor_Infor &&
             language === LANGUAGES.VI && (
