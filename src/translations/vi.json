@@ -69,7 +69,9 @@
       "schedule": "Lịch khám",
       "no-schedule": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác.",
       "choose": "Chọn",
-      "book-free": "và đặt (miễn phí)"
+      "book-free": "và đặt (miễn phí)",
+      "book-succeed": "Xác nhận đăng kí thành công",
+      "book-error": "Lịch hẹn đã được xác nhận hoặc không tồn tại"
     },
     "extra-infor-doctor": {
       "text-address": "Địa chỉ khám",
