@@ -41,24 +41,60 @@ class ProfileDoctor extends Component {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  // renderTimeBooking = (dataTime) => {
+  //   let { language } = this.props;
+  //   let labelVi = moment
+  //     .unix(+dataTime.date / 1000)
+  //     .format("dddd - DD/MM/YYYY");
+
+  //   if (dataTime && !_.isEmpty(dataTime)) {
+  //     let time =
+  //       language === LANGUAGES.VI
+  //         ? dataTime.timeTypeData.valueVi
+  //         : dataTime.timeTypeData.valueEn;
+  //     let date =
+  //       language === LANGUAGES.VI
+  //         ? (dataTime.label = this.capitalizeFirstLetter(labelVi))
+  //         : moment
+  //             .unix(+dataTime.date / 1000)
+  //             .locale("en")
+  //             .format("ddd - MM/DD/YYYY");
+  //     return (
+  //       <>
+  //         <div className="date--time">
+  //           {time} - {date}
+  //         </div>
+  //         <div>
+  //           <FormattedMessage id="patient.booking-modal.booking-free" />
+  //         </div>
+  //       </>
+  //     );
+  //   }
+  //   return <></>;
+  // };
+
   renderTimeBooking = (dataTime) => {
     let { language } = this.props;
-    let labelVi = moment
-      .unix(+dataTime.date / 1000)
-      .format("dddd - DD/MM/YYYY");
 
-    if (dataTime && !_.isEmpty(dataTime)) {
+    // Kiểm tra xem dataTime có tồn tại và có thuộc tính date không
+    if (dataTime && dataTime.date) {
+      let labelVi = moment
+        .unix(+dataTime.date / 1000)
+        .format("dddd - DD/MM/YYYY");
+
       let time =
         language === LANGUAGES.VI
-          ? dataTime.timeTypeData.valueVi
-          : dataTime.timeTypeData.valueEn;
+          ? dataTime.timeTypeData?.valueVi
+          : dataTime.timeTypeData?.valueEn;
+
       let date =
         language === LANGUAGES.VI
-          ? (dataTime.label = this.capitalizeFirstLetter(labelVi))
+          ? this.capitalizeFirstLetter(labelVi)
           : moment
               .unix(+dataTime.date / 1000)
               .locale("en")
               .format("ddd - MM/DD/YYYY");
+
       return (
         <>
           <div className="date--time">
@@ -70,6 +106,8 @@ class ProfileDoctor extends Component {
         </>
       );
     }
+
+    // Nếu dataTime không tồn tại hoặc không có date
     return <></>;
   };
 
@@ -114,7 +152,7 @@ class ProfileDoctor extends Component {
             </div>
           </div>
         </div>
-        <div className="price-clinic">
+        {/* <div className="price-clinic">
           <FormattedMessage id="patient.booking-modal.price" />:{" "}
           {dataProfile &&
             dataProfile.Doctor_Infor &&
@@ -136,6 +174,26 @@ class ProfileDoctor extends Component {
                 suffix="$"
               />
             )}
+        </div> */}
+
+        <div className="price-clinic">
+          <FormattedMessage id="patient.booking-modal.price" />:{" "}
+          {dataProfile?.Doctor_Infor && language === LANGUAGES.VI && (
+            <NumberFormat
+              value={dataProfile?.Doctor_Infor?.priceTypeData?.valueVi}
+              displayType={"text"}
+              thousandSeparator={true}
+              suffix="VND"
+            />
+          )}
+          {dataProfile?.Doctor_Infor && language === LANGUAGES.EN && (
+            <NumberFormat
+              value={dataProfile?.Doctor_Infor?.priceTypeData?.valueEn}
+              displayType={"text"}
+              thousandSeparator={true}
+              suffix="$"
+            />
+          )}
         </div>
       </>
     );

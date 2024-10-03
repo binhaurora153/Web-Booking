@@ -1,0 +1,89 @@
+.detail-specialty-container {
+  background-color: #80808048;
+  padding: 0 50px;
+
+  .specialty-description {
+    border: 1px solid red;
+    height: 100px;
+  }
+
+  .each-doctor {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px black;
+    display: flex;
+    margin: 20px 0;
+    padding: 20px 0;
+    height: auto;
+    .content-left {
+      width: 50%;
+    }
+
+    .dt-content-left {
+      width: 50%;
+      margin-right: 20px;
+      .intro-doctor {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .content-left {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+        }
+        .content-right {
+          object-fit: cover;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 10px;
+          width: 70%;
+          text-align: justify;
+          .up {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          .down {
+            padding-top: 10px;
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+      }
+      .date--time {
+        font-weight: 600;
+        color: rgb(86, 85, 85);
+        margin-top: -5px;
+        margin-bottom: 3px;
+      }
+      .price-clinic {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgb(119, 33, 33);
+        margin-left: 30px;
+      }
+    }
+    .dt-content-right {
+      width: 50%;
+      padding-right: 20px;
+      .doctor-schedule {
+        .doctor-schedule-container {
+          border-right: none !important;
+        }
+        margin-bottom: 10px;
+      }
+      .doctor-extrainfor {
+        .doctor-extra-infor-container {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+}
