@@ -31,12 +31,21 @@ class ManageDoctor extends Component {
       listPrice: [],
       listPayment: [],
       listProvince: [],
+
+      listClinic: [],
+      listSpecialty: [],
       selectedPrice: "",
       selectedPayment: "",
       selectedProvince: "",
+      selectedClinic: "",
+      selectedSpecialty: "",
+
       nameClinic: "",
       addressClinic: "",
       note: "",
+
+      clinicId: "",
+      specialtyId: "",
     };
   }
 
@@ -85,6 +94,14 @@ class ManageDoctor extends Component {
           result.push(object);
         });
       }
+      if (type === "SPECIALTY") {
+        inputData.map((item, index) => {
+          let object = {};
+          object.label = item.name;
+          object.value = item.id;
+          result.push(object);
+        });
+      }
     }
     return result;
   };
@@ -102,7 +119,7 @@ class ManageDoctor extends Component {
     if (
       prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor
     ) {
-      let { resPayment, resPrice, resProvince } =
+      let { resPayment, resPrice, resProvince, resSpecialty } =
         this.props.allRequiredDoctorInfor;
       let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
       let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT");
@@ -110,11 +127,16 @@ class ManageDoctor extends Component {
         resProvince,
         "PROVINCE"
       );
+      let dataSelectSpecialty = this.buildDataInputSelect(
+        resSpecialty,
+        "SPECIALTY"
+      );
 
       this.setState({
         listPrice: dataSelectPrice,
         listPayment: dataSelectPayment,
         listProvince: dataSelectProvince,
+        listSpecialty: dataSelectSpecialty,
       });
     }
     if (prevProps.language !== this.props.language) {
@@ -161,6 +183,11 @@ class ManageDoctor extends Component {
       nameClinic: this.state.nameClinic,
       addressClinic: this.state.addressClinic,
       note: this.state.note,
+      clinicId:
+        this.state.selectedClinic && this.state.selectedClinic.value
+          ? this.state.selectedClinic
+          : "",
+      specialtyId: this.state.selectedSpecialty.value,
     });
   };
 
@@ -225,6 +252,7 @@ class ManageDoctor extends Component {
         selectedPayment: "",
         selectedPrice: "",
         selectedProvince: "",
+        // selectedSpecialty: "",
       });
     }
   };
@@ -389,9 +417,50 @@ class ManageDoctor extends Component {
             />
           </div>
         </div>
+
+        <div className="row">
+          <div className="col-4 form-group">
+            <label>
+              {" "}
+              <FormattedMessage id="admin.manage-doctor.specialty" />
+            </label>
+            <Select
+              value={this.state.selectedSpecialty}
+              onChange={this.handleChangeSelectDoctorInfor}
+              options={this.state.listSpecialty}
+              className="form-content-right"
+              placeholder={
+                <div>
+                  {" "}
+                  <FormattedMessage id="admin.manage-doctor.choose-specialty" />
+                </div>
+              }
+              name="selectedSpecialty"
+            />
+          </div>
+          <div className="col-4 form-group">
+            <label>
+              <FormattedMessage id="admin.manage-doctor.clinic" />
+            </label>
+            <Select
+              value={this.state.selectedClinic}
+              onChange={this.handleChangeSelectDoctorInfor}
+              options={this.state.listClinic}
+              className="form-content-right"
+              placeholder={
+                <div>
+                  {" "}
+                  <FormattedMessage id="admin.manage-doctor.choose-clinic" />
+                </div>
+              }
+              name="selectedClinic"
+            />
+          </div>
+        </div>
+
         <div className="manage-doctor-editor mt-4">
           <MdEditor
-            style={{ height: "480px", marginBottom: "20px" }}
+            style={{ height: "300px", marginBottom: "20px" }}
             renderHTML={(text) => mdParser.render(text)}
             onChange={this.handleEditorChange}
             value={this.state.contentMarkdown}

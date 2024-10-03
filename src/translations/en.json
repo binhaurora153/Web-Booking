@@ -57,7 +57,8 @@
   },
   "homepage": {
     "out-standing-doctor": "Out Standing Doctor",
-    "more-infor": "More infor"
+    "more-infor": "More infor",
+    "specialty": "Popular specialties"
   },
   "manage-schedule": {
     "title": "Manage medical examination schedules",
@@ -105,10 +106,14 @@
       "name-clinic": "Name clinic",
       "address-clinic": "Address clinic",
       "note": "Note",
+      "specialty": "Specialty",
+      "clinic": "Clinic",
       "choose-doctor": "Choose doctor",
       "choose-price": "Choose price",
       "choose-payment": "Choose payment",
       "choose-province": "Choose province",
+      "choose-specialty": "Choose specialty",
+      "choose-clinic": "Choose clinic",
       "infor": "Introductory information",
       "add": "Create Infor",
       "save": "Save Infor"
