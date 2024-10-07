@@ -1,0 +1,32 @@
+.manage-specialty-container {
+  padding: 0 30px;
+
+  .ms-title {
+    font-size: 25px;
+    background: linear-gradient(to right, rgb(184, 159, 159) 10%, #2d055d 100%);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .add-new-specialty {
+    .form-control-file {
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+
+    .btn-save-specialty {
+      width: 150px;
+      height: 35px;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      font-size: 16px;
+      color: #fff;
+      background-color: rgba(42, 123, 42, 0.978);
+      border-radius: 7px;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.682);
+      }
+    }
+  }
+}
