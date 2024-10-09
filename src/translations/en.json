@@ -37,7 +37,8 @@
       "manage-handbook": "Manage Handbook"
     },
     "doctor": {
-      "manage-schedule": "Manage medical examination schedules"
+      "manage-schedule": "Manage medical examination schedules",
+      "manage-patient": "Manage Doctor's patient"
     }
   },
   "manage-user": {

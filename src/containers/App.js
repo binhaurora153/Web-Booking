@@ -62,7 +62,7 @@ class App extends Component {
                     component={userIsAuthenticated(System)}
                   />
                   <Route
-                    path={"/doctor/manage-schedule"}
+                    path={"/doctor/"}
                     component={userIsAuthenticated(Doctor)}
                   />
                   <Route path={path.HOMEPAGE} component={HomePage} />
